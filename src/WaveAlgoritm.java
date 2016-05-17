@@ -87,35 +87,11 @@ public class WaveAlgoritm {
         }
     }
 
-    public int getXE() {
-        return XE;
-    }
-
-    public void setXE(int XE) {
-        this.XE = XE;
-    }
-
-    public int getYE() {
-        return YE;
-    }
-
-    public void setYE(int YE) {
-        this.YE = YE;
-    }
-
     public int getMoves() {
         return Moves;
     }
 
-    public void setMoves(int moves) {
-        Moves = moves;
-    }
-
     public int[][] getMapM() {
         return MapM;
-    }
-
-    public void setMapM(int[][] mapM) {
-        MapM = mapM;
     }
 }

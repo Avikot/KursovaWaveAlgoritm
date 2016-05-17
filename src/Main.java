@@ -1,6 +1,6 @@
 public class Main {
     static int[][] array = new int[20][30];
-    static int xs = 2, ys = 13,
+    static int xs = 13, ys = 11,
         xe = 1, ye = 1;
     static {
         array = new int[][]{
@@ -23,7 +23,7 @@ public class Main {
     }
     public static void main(String[] args){
         WaveAlgoritm wa = new WaveAlgoritm(array,xs,ys,xe,ye);
-        Router ro = new Router(wa.getMapM(), wa.getMoves(), wa.getXE(), wa.getYE());
+        Router ro = new Router(wa.getMapM(), wa.getMoves(), xe, ye);
 
         wa.showTablesToOut();
         ro.createRoute();

@@ -3,28 +3,24 @@ public class Router {
     int Moves;
     int XE;
     int YE;
-    public Router(int [][] mas, int move, int K, int L){
+    public Router(int [][] mas, int moves, int XE, int YE){
         this.MapM = mas;
-        this.Moves = move;
-        this.XE = K;
-        this.YE = L;
+        this.Moves = moves;
+        this.XE = XE;
+        this.YE = YE;
     }
     public void createRoute(){
         int k = XE;
         int l = YE;
-        MapM[k][l] = -MapM[k][l];
-        for(int i = Moves; i > 0; i--){
-            if((Math.abs(MapM[k][l]) > MapM[k + 1][l]) && (MapM[k + 1][l] != 0)) {
-                MapM[k + 1][l] = -MapM[k + 1][l];
-                k = k+1;
-            } else if(Math.abs(MapM[k][l]) > MapM[k][l + 1] && (MapM[k][l + 1] != 0)){
-                MapM[k][l + 1] = -MapM[k][l + 1];
+        for(int i = Moves + 1; i >= 0; i--){
+            MapM[k][l] = -MapM[k][l];
+            if((Math.abs(MapM[k][l]) - MapM[k + 1][l]) == 1) {
+                k = k + 1;
+            } else if((Math.abs(MapM[k][l]) - MapM[k][l + 1]) == 1){
                 l = l + 1;
-            } else if(Math.abs(MapM[k][l]) > MapM[k - 1][l] && (MapM[k - 1][l] != 0)){
-                MapM[k - 1][l] = -MapM[k - 1][l];
-                k = k -1;
-            } else if(Math.abs(MapM[k][l]) > MapM[k][l - 1] && (MapM[k][l - 1] != 0)){
-                MapM[k][l - 1] = -MapM[k][l - 1];
+            } else if((Math.abs(MapM[k][l]) - MapM[k - 1][l]) == 1){
+                k = k - 1;
+            } else if((Math.abs(MapM[k][l]) - MapM[k][l - 1]) == 1){
                 l = l - 1;
             }
         }
