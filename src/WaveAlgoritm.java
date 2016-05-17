@@ -62,8 +62,6 @@ public class WaveAlgoritm {
     }
 
     public void showTablesToOut(){
-        MapM[XS][YS] = -MapM[XS][YS];
-        MapM[XE][YE] = -MapM[XE][YE];
         System.out.println("Total: " + Moves + " moves; time: " + new Date());
         for (X = 0; X < MapM.length; X++){
             StringBuilder builder = new StringBuilder();

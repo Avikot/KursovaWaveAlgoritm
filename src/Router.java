@@ -12,7 +12,7 @@ public class Router {
     public void createRoute(){
         int k = XE;
         int l = YE;
-        for(int i = Moves + 1; i >= 0; i--){
+        for(int i = 0; i < Moves + 1; i++){
             MapM[k][l] = -MapM[k][l];
             if((Math.abs(MapM[k][l]) - MapM[k + 1][l]) == 1) {
                 k = k + 1;
@@ -24,5 +24,6 @@ public class Router {
                 l = l - 1;
             }
         }
+        System.out.println("Revers move of wave algoritm: ");
     }
 }

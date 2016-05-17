@@ -1,5 +1,5 @@
 public class Main {
-    static int[][] array = new int[20][30];
+    static int[][] array = new int[15][15];
     static int xs = 13, ys = 11,
         xe = 1, ye = 1;
     static {
